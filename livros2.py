@@ -18,8 +18,8 @@ def adicionar_livro():
         print("Seus livros estão sendo sorteados...")
         livro_escolhido = random.choice(lista)
         print("O livro escolhido foi {}".format(livro_escolhido))
-        decisao = input("Para repetir o sorteio tecle 1, ou zero para reiniciar o programa ou fechar")
-        if decisao != "0":
+        decisao = input("Para repetir o sorteio tecle 0, ou 1 para reiniciar o programa ou fechar")
+        if decisao == "0":
             repetir_sorteio()
         else:
             fechar()
@@ -37,12 +37,12 @@ def fechar():
 
 
 def repetir_sorteio():
-    coiso = "s"
-    while coiso == "s":
+    coiso = "0"
+    while coiso == "0":
         print("Seus livros estão sendo sorteados novamente...")
         livro_escolhido = random.choice(lista)
         print("O livro escolhido foi {}".format(livro_escolhido))
-        coiso = input("Você quer repetir o sorteio? Se sim digite s ou x para sair")
+        coiso = input("Você quer repetir o sorteio? Se sim digite 0 ou x para sair")
     else:
         fechar()
 
